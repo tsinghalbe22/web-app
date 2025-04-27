@@ -91,4 +91,12 @@
     </plugins>
   </build>
 
+  <distributionManagement>
+    <repository>
+        <id>upes</id>
+        <name>Release</name>
+        <url>http://localhost:8081/repository/upes/</url>
+    </repository>
+  </distributionManagement>
+
 </project>
