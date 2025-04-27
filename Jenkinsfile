@@ -40,8 +40,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                scp target/java-webapp-1.0.jar deploy@localhost:~/staging/java-webapp-1.0.jar && \
-                ssh deploy@localhost "java -jar ~/staging/java-webapp-1.0.jar 2> /dev/null &"
+                scp target/java-webapp-2.0.jar deploy@localhost:~/staging/java-webapp-2.0.jar && \
+                ssh deploy@localhost "java -jar ~/staging/java-webapp-2.0.jar 2> /dev/null &"
                 '''
             }
         }
