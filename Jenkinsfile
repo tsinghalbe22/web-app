@@ -33,7 +33,7 @@ pipeline {
                 -Dsonar.projectKey=web-app \
                 -Dsonar.projectName='web-app' \
                 -Dsonar.host.url=http://localhost:9000 \
-                -Dsonar.token=sqp_d51481e50359e5f13d88beaea5815ca341524e5b
+                -Dsonar.token=sqp_de52cc5e9ea5fe3ae085fe7d3577ae5e677367b6
                 '''
             }
         }
