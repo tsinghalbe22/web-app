@@ -41,8 +41,15 @@ pipeline {
             steps {
                 sh '''
                 scp target/java-webapp-1.0.jar deploy@localhost:~/staging/java-webapp-1.0.jar && \
-                ssh deploy@localhost "java -jar ~/staging/java-webapp-1.0.jar 2> /dev/null &"
+                ssh deploy@localhost "ssh deploy@localhost "nohup java -jar ~/staging/java-webapp-1.0.1.jar & echo \$! > ~/staging/java-webapp.pid""
                 '''
+
+                sh 'sleep 600'
+                    
+                sh '''
+                ssh deploy@localhost "kill -9 \$(cat ~/staging/java-webapp.pid)"
+                '''
+
             }
         }
     }
