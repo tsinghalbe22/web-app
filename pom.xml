@@ -46,6 +46,11 @@
         <artifactId>spark-template-thymeleaf</artifactId>
         <version>2.3</version>
     </dependency>
+    <dependency>
+		  <groupId>org.sonarsource.scanner.maven</groupId>
+		  <artifactId>sonar-maven-plugin</artifactId>
+		  <version>3.2</version>
+	  </dependency>
   </dependencies>
 
   <build>
@@ -85,5 +90,13 @@
       </plugin>
     </plugins>
   </build>
+
+  <distributionManagement>
+    <repository>
+        <id>upes</id>
+        <name>Release</name>
+        <url>http://localhost:8081/repository/upes/</url>
+    </repository>
+  </distributionManagement>
 
 </project>
